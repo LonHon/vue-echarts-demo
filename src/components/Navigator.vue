@@ -1,7 +1,9 @@
 <template>
   <div class="main-navi">
     <ul>
-      <li v-for="item in menu"> {{item}} </li>
+      <template  v-for="(item, index) in menu">
+        <router-link v-if="item.path" :to="item.path" @click="changeNavi($event,item.name)"><li :title="item.descript"> {{item.name}} </li></router-link>
+      </template>
     </ul>
 
   </div>
@@ -12,8 +14,33 @@
         name: 'navigation',
         data () {
             return {
-                menu: ['主页', '随笔', '相册', '影音']
+                currentNavi: '',
+                menu: [
+                  {
+                      name: '主页',
+                      path: '/',
+                      descript: 'home'
+                  },
+                  {
+                    name: '图片',
+                    path: '/hhh',
+                    descript: '图片上传预览组件'
+                  },
+                  {
+                    name: '相册',
+                    path: ''
+                  },
+                  {
+                    name: '影音',
+                    path: ''
+                  }
+                ]
             }
+        },
+        methods: {
+          changeNavi: function(e, n){
+              this.currentNavi = n;
+          }
         }
     }
 </script>
@@ -31,7 +58,6 @@
     height: 30px;
     margin: 0 10px;
     border: 1px solid lavender;
-    cursor: pointer;
   }
   li:after{
     content: "";

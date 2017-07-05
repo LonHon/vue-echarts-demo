@@ -1,5 +1,6 @@
 <template>
   <div class="hello">
+    <h2>图片上传预览</h2>
     <div class="imgArea">
       <ul>
         <li v-for="(item,index) in mmm" >
@@ -59,7 +60,7 @@ export default {
     },
     delImg: function(e,i){
       this.mmm[i].data = '';
-      var dom = document.getElementById(this.mmm[i].name);
+      let dom = document.getElementById(this.mmm[i].name);
       dom.value ='';
     }
   },
@@ -71,7 +72,8 @@ export default {
 
   .imgArea{
     width: 400px;
-    height: 100px;
+    height: 200px;
+    margin: 50px auto;
   }
   .imgArea ul{
     margin-top: 30px;

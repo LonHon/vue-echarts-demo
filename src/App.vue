@@ -1,19 +1,13 @@
 <template>
   <div id="app">
-    <hello></hello>
-    <p>上面是作为模块引入的</p>
-    <button @click="test()" >玩玩箭头函数</button>
-    <router-link to="/hhh"> <h5>图片上传</h5></router-link>
     <Navi></Navi>
-    <p>下面是路由到页面中的</p>
-    <router-view></router-view>
     <hr>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
   import Navi from '@/components/Navigator'
-  import Hello from '@/components/Hello'
 export default {
   name: 'app',
   data(){
@@ -21,13 +15,8 @@ export default {
     }
   },
   methods: {
-      test: ()=>{
-          let arr= [true,666666,3];
-          let [q,w,e] = arr;
-          console.log(q,w,e)
-      }
   },
-  components: { Navi, Hello }
+  components: { Navi }
 }
 </script>
 
@@ -43,5 +32,9 @@ export default {
     width: 100%;
     height: 100%;
     position: relative;
+  }
+  h2 {
+    font-size: 20px;
+    margin: 10px;
   }
 </style>
