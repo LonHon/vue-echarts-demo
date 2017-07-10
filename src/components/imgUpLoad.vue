@@ -4,9 +4,10 @@
     <div class="imgArea">
       <ul>
         <li v-for="(item,index) in mmm" >
+          <span>+</span>
           <img v-if="item.data != ''" v-bind:src=" item.data || index " >
           <input type="file" :id=" item.name " @change="pushImg($event,index)" accept="image/jpeg,image/png,image/gif">
-          <span v-if="item.data != ''" @click="delImg($event,index)">删除</span>
+          <span class="clear" v-if="item.data != ''" @click="delImg($event,index)">删</span>
         </li>
       </ul>
     </div>
@@ -55,7 +56,7 @@ export default {
         flag.change= true;
         setTimeout( ()=>{
           flag.change= false;
-        },1000)
+        },2000)
       }
     },
     delImg: function(e,i){
@@ -82,6 +83,7 @@ export default {
     display: inline-block;
     width: 50px;
     height: 50px;
+    line-height: 50px;
     position: relative;
     border: 1px solid #485214;
     margin-right: 10px;
@@ -101,17 +103,19 @@ export default {
     opacity: 0;
     cursor: pointer;
   }
-  .imgArea li span{
+  .imgArea .clear{
     font-size: 16px;
     color: orangered;
     position: absolute;
     right: -5px;
-    top: -10px;
+    top: -25px;
     cursor: pointer;
   }
   .tips{
-    width: 100px;
+    font-size: 25px;
+    width: 200px;
     height: 100px;
+    margin: 0 auto;
     border: 1px solid rosybrown;
   }
 </style>

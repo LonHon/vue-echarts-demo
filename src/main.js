@@ -3,10 +3,14 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router/route'
+import echarts from 'echarts'
+import chinaMap from '../static/js/china'
+import axios from 'axios'
 
+Vue.prototype.$echarts = echarts
+Vue.prototype.$ajax = axios
 Vue.config.productionTip = false
 
-/* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,

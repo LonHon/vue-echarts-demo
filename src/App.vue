@@ -1,8 +1,9 @@
 <template>
   <div id="app">
     <Navi></Navi>
-    <hr>
-    <router-view></router-view>
+    <div class="main">
+      <router-view></router-view>
+    </div>
   </div>
 </template>
 
@@ -21,7 +22,7 @@ export default {
 </script>
 
 <style>
-  @import '../src/assets/style/reset.css';
+  @import '../static/style/reset.css';
   #app {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -36,5 +37,8 @@ export default {
   h2 {
     font-size: 20px;
     margin: 10px;
+  }
+  .main {
+    padding-top: 0px;
   }
 </style>

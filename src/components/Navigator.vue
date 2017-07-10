@@ -1,11 +1,13 @@
 <template>
   <div class="main-navi">
-    <ul>
-      <template  v-for="(item, index) in menu">
-        <router-link v-if="item.path" :to="item.path" @click="changeNavi($event,item.name)"><li :title="item.descript"> {{item.name}} </li></router-link>
-      </template>
-    </ul>
-
+    <div class="navi-container">
+      <ul>
+        <template  v-for="(item, index) in menu">
+          <router-link v-if="item.path" :to="item.path" @click="changeNavi($event,item.name)"><li :title="item.descript"> {{item.name}} </li></router-link>
+        </template>
+      </ul>
+      <!--<div class="navi-closer"></div>-->
+    </div>
   </div>
 </template>
 
@@ -23,12 +25,13 @@
                   },
                   {
                     name: '图片',
-                    path: '/hhh',
+                    path: '/upImage',
                     descript: '图片上传预览组件'
                   },
                   {
-                    name: '相册',
-                    path: ''
+                    name: 'Echarts',
+                    path: '/chart',
+                    descript: '百度eCharts做的一些demo'
                   },
                   {
                     name: '影音',
@@ -47,9 +50,22 @@
 
 <style scoped>
   .main-navi{
+    position: relative;
     width: 100%;
+    height: 60px;
     line-height: 30px;
     margin: 20px 0;
+  }
+  .navi-closer{
+    display: block;
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    top: 60px;
+    right: 80px;
+    background-image: url("../../static/images/navi_closer.png") ;
+    background-repeat: no-repeat;
+    cursor: pointer;
   }
   li{
     position: relative;
@@ -73,9 +89,6 @@
   li:hover:after{
     content: "";
     height: 100%;
-  }
-  ul span{
-    font-family: icon;
   }
 
 </style>
