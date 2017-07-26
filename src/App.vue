@@ -1,6 +1,8 @@
 <template>
   <div id="app">
-    <Navi></Navi>
+    <div class="navigarea">
+      <Navi></Navi>
+    </div>
     <div class="main">
       <router-view></router-view>
     </div>
@@ -34,11 +36,20 @@ export default {
     height: 100%;
     position: relative;
   }
-  h2 {
+  h2{
     font-size: 20px;
     margin: 10px;
   }
+  .navigarea{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 99999;
+  }
   .main {
-    padding-top: 0px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
   }
 </style>

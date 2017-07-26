@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
-    <h2>图片上传预览</h2>
     <div class="imgArea">
+      <h2>图片上传预览</h2>
       <ul>
         <li v-for="(item,index) in mmm" >
           <span>+</span>
@@ -70,11 +70,15 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
+  .hello{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
   .imgArea{
     width: 400px;
     height: 200px;
-    margin: 50px auto;
+    margin: 120px auto;
   }
   .imgArea ul{
     margin-top: 30px;

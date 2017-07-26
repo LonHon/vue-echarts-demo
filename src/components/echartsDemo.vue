@@ -1,7 +1,12 @@
 <template>
   <div class="chart">
     <div class="mapChart" id="mapContain"></div>
-    <div class="barChart" id="floatChart"></div>
+    <div class="barBox" draggable="true">
+      <ul class="checker">
+        <li v-for="item in chartType" @click="creatFloatChart('floatChart',item.type)">{{ item.name }}</li>
+      </ul>
+      <div class="barChart" id="floatChart"></div>
+    </div>
   </div>
 </template>
 
@@ -10,7 +15,21 @@
         name: 'chart',
         data () {
             return {
-
+                chartType: [
+                  {
+                    name: '柱状',
+                    type: 'bar'
+                  },
+                  {
+                    name: '折线',
+                    type: 'line'
+                  },
+                  {
+                    name: '散点',
+                    type: 'scatter'
+                  }
+                  ],
+                checkFlag: false
             }
         },
         methods: {
@@ -40,7 +59,7 @@
                         }
                     },
                     zoom: 1.2,
-                    center: [104.070029,32.583574],
+                    center: [104.070029,36.583574],
                     roam: true,
                     itemStyle: {
                         normal: {
@@ -74,7 +93,7 @@
                       formatter: '{b}'
                     },
                     emphasis:{
-                      show:true
+                      show:false
                     }
                   },
                   lineStyle: {
@@ -137,11 +156,12 @@
 //            createTooltip: function (params) {
 //                //做一个提示框
 //            },
-            creatFloatChart: function ( id ) {
+            creatFloatChart: function ( id ,chartType) {
+                chartType = chartType || 'bar';
                 let mychart = this.$echarts.init(document.getElementById(id));
                 let option = {
                     title: {
-                        text: '上周步行图',
+                        text: '步行图',
                         left: '34%'
                     },
                     color: ['#3398DB'],
@@ -157,31 +177,54 @@
                       bottom: '3%',
                       containLabel: true
                     },
+                    legend: {
+                        data: ['上周','本周'],
+                        top: '5px',
+                        right: 0
+                    },
                     xAxis : [
                       {
                         type : 'category',
                         data : ['周一', '周二', '周三', '周四', '周五', '周六', '周日'],
                         axisTick: {
                           alignWithLabel: true
-                        }
+                        },
                       }
                     ],
                     yAxis : [
                       {
                         type : 'value',
+                        splitLine:{
+                          show:false
+                        }
                       }
                     ],
                     series : [
                       {
-                        name:'步数',
-                        type:'bar',
-                        barWidth: '60%',
+                        name: '上周',
+                        type: chartType,
+                        barWidth: '20%',
+                        itemStyle: {
+                            normal:{
+                            }
+                        },
                         data:[9582, 6242, 3812, 11110, 10596, 929, 4609]
+                      },
+                      {
+                        name: '本周',
+                        type: chartType,
+                        barWidth: '20%',
+                        itemStyle: {
+                          normal:{
+                              color: 'darkBlue'
+                          }
+                        },
+                        data:[8320, 5907]
                       }
                     ]
                 };
-                mychart.setOption(option);
-            }
+                mychart.setOption(option,true);
+            },
 
         },
         mounted: function () {
@@ -209,12 +252,26 @@
     height: 100%;
   }
   .barChart{
-    position: absolute;
-    top: 0;
-    left: 5%;
+    margin: 10px;
     width: 380px;
     height: 320px;
+  }
+  .barBox{
+    position: absolute;
+    width: 400px;
+    top: 10%;
+    left: 3%;
     z-index: 2;
   }
-
+  .checker li{
+    display: inline-block;
+    margin-right: 10px;
+    width: 60px;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #888;
+  }
+  .checker .set{
+    color: lavender;
+  }
 </style>

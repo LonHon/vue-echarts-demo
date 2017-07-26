@@ -34,8 +34,9 @@
                     descript: '百度eCharts做的一些demo'
                   },
                   {
-                    name: '影音',
-                    path: ''
+                    name: '查询',
+                    path: '/search',
+                    descript: '做一个模糊查询'
                   }
                 ]
             }
@@ -50,11 +51,11 @@
 
 <style scoped>
   .main-navi{
-    position: relative;
     width: 100%;
     height: 60px;
     line-height: 30px;
     margin: 20px 0;
+    z-index: 99;
   }
   .navi-closer{
     display: block;
