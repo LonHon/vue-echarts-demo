@@ -7,6 +7,10 @@
       </ul>
       <div class="barChart" id="floatChart"></div>
     </div>
+    <div id="pieDom" class="newbarmap" v-show="currentScatter!==''">根据map的散点显示数据</div>
+    <div id="mapZoom">
+
+    </div>
   </div>
 </template>
 
@@ -29,11 +33,53 @@
                     type: 'scatter'
                   }
                   ],
-                checkFlag: false
+                checkFlag: false,
+                extendMapPie: false,
+                pieOption: {
+                  title : {
+                    text: '',
+                    subtext: '',
+                    x:'center',
+                    textStyle: {
+                        fontSize: 12,
+                    },
+                  },
+                  tooltip : {
+                    trigger: 'item',
+                    formatter: "{a} <br/>{b} : {c} ({d}%)"
+                  },
+                  series : [
+                    {
+                      name: '访问来源',
+                      type: 'pie',
+                      radius : '55%',
+                      //center: ['50%', '60%'],
+                      itemStyle: {
+                        emphasis: {
+                          shadowBlur: 10,
+                          shadowOffsetX: 0,
+                          shadowColor: 'rgba(0, 0, 0, 0.5)'
+                        }
+                      },
+                      label: {
+                          normal: {
+                              position: 'inner'
+                          }
+                      },
+                      data:[
+                        {value:335, name:'邮件'},
+                        {value:500, name:'微信'},
+                      ],
+                    }
+                  ]
+                },
+                testPie: null,
+                currentScatter: ''
             }
         },
         methods: {
             creatMap: function (id, data) {
+              let _this = this;
               let mychart = this.$echarts.init(document.getElementById(id));
               let option = {
                 backgroundColor: '#fff',
@@ -46,7 +92,15 @@
                     }
                 },
                 tooltip : {
-                    trigger: 'item'
+                    show: false,
+                    trigger: 'item',
+                    formatter(p){
+                        return '0';
+                    },
+                    axisPointer: {
+                      snap: true
+                    },
+                    alwaysShowContent: true,
                 },
                 geo: {
                     map: 'china',
@@ -73,13 +127,49 @@
                 },
                 series: []
               };
-              option.series.push(this.fomartCoord(data.dot));
-              option.series.push(this.fomartLines(data.driving));
+              option.series.push(_this.fomartCoord(data.dot));
+              option.series.push(_this.fomartLines(data.driving));
               mychart.setOption(option);
-//              mychart.on('click', function (params) {
-//                console.log(params)
-//              });
-
+              mychart.on('click', (p)=>{
+                  if(p.componentType === "series" && p.seriesName === "city"){
+                      this.createMapPie({
+                        name: p.name ,
+                        data: {
+                            val1: Math.floor(Math.random()*100 + 5),
+                            val2: Math.floor(Math.random()*100 + 5),
+                            val3: Math.floor(Math.random()*100 + 5),
+                        },
+                        x: p.event.offsetX,
+                        y: p.event.offsetY,
+                      });
+                  }else{
+                      this.createMapPie(false);
+                  }
+              })
+            },
+            createMapPie: function (params) {
+                if(params.name === this.currentScatter) return false;
+                if(!params){
+                    $('#pieDom').hide();
+                    this.currentScatter ='';
+                    return false;
+                }
+                $('#pieDom').show();
+                $('#pieDom').css({
+                    position: 'fixed',
+                    top: (params.y>220 ? params.y-220 : params.y) + 'px',
+                    left: (params.x + 20) + 'px',
+                })
+                this.currentScatter = params.name;
+                let barChartDom = this.testPie;
+                let option = this.pieOption;
+                option.series[0].data = [
+                  {value:params.data.val1, name:'邮件'},
+                  {value:params.data.val2, name:'微信'},
+                  {value:params.data.val3, name:'QQ'},
+                ];
+                option.title.text = params.name + ':广告分布';
+                barChartDom.setOption(this.pieOption,true);
             },
             fomartLines: function (d) {
               let series = {
@@ -120,7 +210,7 @@
             fomartCoord: function (d) {
                 let series = {
                     type : 'scatter',
-                    name : '喜欢的地方',
+                    name : 'city',
                     coordinateSystem: 'geo',
                     label: {
                       normal: {
@@ -135,7 +225,10 @@
                     symbolSize: 15,
                     itemStyle: {
                       normal: {
-                        color: 'rgba(7,95,171,1)'
+                        color: 'rgba(7,95,171,.5)'
+                      },
+                      emphasis: {
+                          color: 'rgba(87,95,199,1)'
                       }
                     },
                     tooltip: {
@@ -153,9 +246,6 @@
                 })
                 return series;
             },
-//            createTooltip: function (params) {
-//                //做一个提示框
-//            },
             creatFloatChart: function ( id ,chartType) {
                 chartType = chartType || 'bar';
                 let mychart = this.$echarts.init(document.getElementById(id));
@@ -166,7 +256,7 @@
                     },
                     color: ['#3398DB'],
                     tooltip : {
-                      trigger: 'axis',
+                      trigger: 'item',
                       axisPointer : {            // 坐标轴指示器，坐标轴触发有效
                         type : 'line'        // 默认为直线，可选为：'line' | 'shadow'
                       }
@@ -224,15 +314,25 @@
                     ]
                 };
                 mychart.setOption(option,true);
+//              模拟触发tooltip
+                mychart.dispatchAction({
+                  type: 'showTip',
+                  seriesIndex: 0, //指定series
+                  dataIndex: 0  //指定data
+                })
             },
 
+        },
+        created: function () {
         },
         mounted: function () {
             this.$ajax.get('/static/json/mapdata.json').then( res => {
                 this.creatMap('mapContain', res.data);
             })
             this.creatFloatChart('floatChart');
-
+            this.testPie = this.$echarts.init(document.getElementById('pieDom'));
+        },
+        watch: {
         }
     }
 </script>
@@ -241,7 +341,7 @@
   .chart{
     position: relative;
     width: 100%;
-    height: 900px;
+    height: 100%;
     background-color: lavender;
   }
   .mapChart{
@@ -273,5 +373,11 @@
   }
   .checker .set{
     color: lavender;
+  }
+  .newbarmap{
+    position: fixed;
+    width: 200px;
+    height: 200px;
+    border: 1px solid #ccc;
   }
 </style>
