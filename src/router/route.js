@@ -4,12 +4,18 @@ import imgUpLoad from '@/components/imgUpLoad'
 import chart from '@/components/echartsDemo'
 import fuzzySearch from '@/components/fuzzySearch'
 import userRespon from '@/components/userResponse'
+import edu_syl from '@/components/edu_syl'
 Vue.use(Router)
 
 export default new Router({
   routes: [
     {
       path: '/',
+      name: 'default',
+      component: chart
+    },
+    {
+      path: '/userRespon',
       name: 'userRespon',
       component: userRespon
     },
@@ -27,6 +33,12 @@ export default new Router({
       path: '/search',
       name: 'fuzzySearch',
       component: fuzzySearch
-    }
+    },
+    {
+      path: '/edu_syl',
+      name: 'edu_syl',
+      component: edu_syl
+    },
+
   ]
 })

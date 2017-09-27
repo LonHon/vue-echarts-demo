@@ -3,7 +3,7 @@
     <div class="navi-container">
       <ul>
         <template  v-for="(item, index) in menu">
-          <router-link v-if="item.path" :to="item.path" @click="changeNavi($event,item.name)"><li :title="item.descript"> {{item.name}} </li></router-link>
+          <router-link v-if="item.path" :to="item.path" @click="changeNavi($event,item.name)"><li class="navi-item" :title="item.descript"> {{item.name}} </li></router-link>
         </template>
       </ul>
       <!--<div class="navi-closer"></div>-->
@@ -22,6 +22,11 @@
                       name: '主页',
                       path: '/',
                       descript: 'home'
+                  },
+                  {
+                    name: '双一流',
+                    path: '/edu_syl',
+                    descript: '双一流大学、学科分布'
                   },
                   {
                     name: '图片',
@@ -90,6 +95,9 @@
   li:hover:after{
     content: "";
     height: 100%;
+  }
+  .navi-item{
+    background: #fff;
   }
 
 </style>

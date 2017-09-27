@@ -1,0 +1,563 @@
+[{
+        "colName": "中央民族大学",
+        "coords": [116.32029, 39.95108],
+        "coletype": "edua"
+    }, {
+        "colName": "北京师范大学",
+        "coords": [116.36588, 39.96168],
+        "coletype": "edua"
+    }, {
+        "colName": "北京理工大学",
+        "coords": [116.31667, 39.96091],
+        "coletype": "edua"
+    }, {
+        "colName": "清华大学",
+        "coords": [116.32697, 40.0036],
+        "coletype": "edua"
+    }, {
+        "colName": "中国人民大学",
+        "coords": [116.31516, 39.9702],
+        "coletype": "edua"
+    }, {
+        "colName": "北京航空航天大学",
+        "coords": [116.34975, 39.98421],
+        "coletype": "edua"
+    }, {
+        "colName": "中国农业大学",
+        "coords": [116.35745, 40.00494],
+        "coletype": "edua"
+    }, {
+        "colName": "南开大学",
+        "coords": [117.17035, 39.10363],
+        "coletype": "edua"
+    }, {
+        "colName": "北京大学",
+        "coords": [116.31025, 39.99287],
+        "coletype": "edua"
+    },
+    {
+        "colName": "华东师范大学",
+        "coords": [121.4064, 31.22847],
+        "coletype": "edua"
+    }, {
+        "colName": "东南大学",
+        "coords": [118.79346, 32.05508],
+        "coletype": "edua"
+    }, {
+        "colName": "南京大学",
+        "coords": [118.78022, 32.05595],
+        "coletype": "edua"
+    }, {
+        "colName": "大连理工大学",
+        "coords": [121.52967, 38.88261],
+        "coletype": "edua"
+    }, {
+        "colName": "天津大学",
+        "coords": [117.17491, 39.10924],
+        "coletype": "edua"
+    }, {
+        "colName": "吉林大学",
+        "coords": [125.28355, 43.8233],
+        "coletype": "edua"
+    }, {
+        "colName": "复旦大学",
+        "coords": [121.50331, 31.29864],
+        "coletype": "edua"
+    }, {
+        "colName": "哈尔滨工业大学",
+        "coords": [126.63249, 45.74764],
+        "coletype": "edua"
+    }, {
+        "colName": "上海交通大学",
+        "coords": [121.43645, 31.02567],
+        "coletype": "edua"
+    }, {
+        "colName": "同济大学",
+        "coords": [121.50095, 31.28371],
+        "coletype": "edua"
+    },
+    {
+        "colName": "中国海洋大学",
+        "coords": [120.33592, 36.06257],
+        "coletype": "edua"
+    }, {
+        "colName": "中国科学技术大学",
+        "coords": [117.26958, 31.83718],
+        "coletype": "edua"
+    }, {
+        "colName": "中南大学",
+        "coords": [112.93161, 28.16802],
+        "coletype": "edua"
+    }, {
+        "colName": "厦门大学",
+        "coords": [118.09451, 24.43832],
+        "coletype": "edua"
+    }, {
+        "colName": "武汉大学",
+        "coords": [114.3628, 30.5378],
+        "coletype": "edua"
+    }, {
+        "colName": "中山大学",
+        "coords": [113.29814, 23.09809],
+        "coletype": "edua"
+    }, {
+        "colName": "华南理工大学",
+        "coords": [113.34623, 23.15241],
+        "coletype": "edua"
+    }, {
+        "colName": "浙江大学",
+        "coords": [120.08654, 30.30465],
+        "coletype": "edua"
+    }, {
+        "colName": "山东大学",
+        "coords": [117.06044, 36.67515],
+        "coletype": "edua"
+    }, {
+        "colName": "华中科技大学",
+        "coords": [114.41375, 30.51171],
+        "coletype": "edua"
+    },
+    {
+        "colName": "北京协和医学院",
+        "coords": [116.41484, 39.91115],
+        "coletype": "course"
+    }, {
+        "colName": "北京科技大学",
+        "coords": [116.36072, 39.99135],
+        "coletype": "course"
+    }, {
+        "colName": "北京林业大学",
+        "coords": [116.34494, 40.00199],
+        "coletype": "course"
+    }, {
+        "colName": "北京邮电大学",
+        "coords": [116.35777, 39.96158],
+        "coletype": "course"
+    }, {
+        "colName": "西北农林科技大学",
+        "coords": [108.07165, 34.2622],
+        "coletype": "edub"
+    }, {
+        "colName": "北京化工大学",
+        "coords": [116.42098, 39.97069],
+        "coletype": "course"
+    }, {
+        "colName": "云南大学",
+        "coords": [102.70281, 25.05442],
+        "coletype": "edub"
+    }, {
+        "colName": "新疆大学",
+        "coords": [87.61863, 43.76549],
+        "coletype": "edub"
+    }, {
+        "colName": "北京交通大学",
+        "coords": [116.34107, 39.95092],
+        "coletype": "course"
+    }, {
+        "colName": "北京工业大学",
+        "coords": [116.48067, 39.87385],
+        "coletype": "course"
+    },
+    {
+        "colName": "外交学院",
+        "coords": [116.34617, 39.92638],
+        "coletype": "course"
+    }, {
+        "colName": "中央音乐学院",
+        "coords": [116.35794, 39.90239],
+        "coletype": "course"
+    }, {
+        "colName": "中国人民公安大学",
+        "coords": [116.33778, 39.90021],
+        "coletype": "course"
+    }, {
+        "colName": "北京外国语大学",
+        "coords": [116.31306, 39.95571],
+        "coletype": "course"
+    }, {
+        "colName": "中央财经大学",
+        "coords": [116.34216, 39.95936],
+        "coletype": "course"
+    }, {
+        "colName": "中国传媒大学",
+        "coords": [116.55757, 39.91293],
+        "coletype": "course"
+    }, {
+        "colName": "对外经济贸易大学",
+        "coords": [116.42888, 39.97944],
+        "coletype": "course"
+    }, {
+        "colName": "北京体育大学",
+        "coords": [116.31807, 40.02251],
+        "coletype": "course"
+    }, {
+        "colName": "首都师范大学",
+        "coords": [116.30658, 39.93069],
+        "coletype": "course"
+    }, {
+        "colName": "北京中医药大学",
+        "coords": [116.42816, 39.97123],
+        "coletype": "course"
+    },
+    {
+        "colName": "中央美术学院",
+        "coords": [116.46375, 39.98359],
+        "coletype": "course"
+    }, {
+        "colName": "中国音乐学院",
+        "coords": [116.37956, 39.9911],
+        "coletype": "course"
+    }, {
+        "colName": "中央戏剧学院",
+        "coords": [116.40407, 39.93587],
+        "coletype": "course"
+    }, {
+        "colName": "华北电力大学",
+        "coords": [116.30907, 40.09009],
+        "coletype": "course"
+    }, {
+        "colName": "天津医科大学",
+        "coords": [117.18443, 39.10645],
+        "coletype": "course"
+    }, {
+        "colName": "中国政法大学",
+        "coords": [116.35155, 39.96576],
+        "coletype": "course"
+    }, {
+        "colName": "河北工业大学",
+        "coords": [117.0582, 39.23497],
+        "coletype": "course"
+    }, {
+        "colName": "天津中医药大学",
+        "coords": [117.16708, 39.11751],
+        "coletype": "course"
+    }, {
+        "colName": "天津工业大学",
+        "coords": [117.11415, 39.06552],
+        "coletype": "course"
+    }, {
+        "colName": "太原理工大学",
+        "coords": [112.52293, 37.8603],
+        "coletype": "course"
+    },
+    {
+        "colName": "延边大学",
+        "coords": [129.49265, 42.91049],
+        "coletype": "course"
+    }, {
+        "colName": "辽宁大学",
+        "coords": [123.40607, 41.83362],
+        "coletype": "course"
+    }, {
+        "colName": "内蒙古大学",
+        "coords": [111.69061, 40.81224],
+        "coletype": "course"
+    }, {
+        "colName": "东北农业大学",
+        "coords": [126.72905, 45.74239],
+        "coletype": "course"
+    }, {
+        "colName": "东华大学",
+        "coords": [121.41511, 31.20352],
+        "coletype": "course"
+    }, {
+        "colName": "哈尔滨工程大学",
+        "coords": [126.68219, 45.77579],
+        "coletype": "course"
+    }, {
+        "colName": "东北师范大学",
+        "coords": [125.33137, 43.86188],
+        "coletype": "course"
+    }, {
+        "colName": "华东理工大学",
+        "coords": [121.42457, 31.14399],
+        "coletype": "course"
+    }, {
+        "colName": "大连海事大学",
+        "coords": [121.53336, 38.87112],
+        "coletype": "course"
+    }, {
+        "colName": "东北林业大学",
+        "coords": [126.63818, 45.72074],
+        "coletype": "course"
+    },
+    {
+        "colName": "上海音乐学院",
+        "coords": [121.45432, 31.21331],
+        "coletype": "course"
+    }, {
+        "colName": "上海海洋大学",
+        "coords": [121.41188, 31.1615],
+        "coletype": "course"
+    }, {
+        "colName": "上海财经大学",
+        "coords": [121.50074, 31.30639],
+        "coletype": "course"
+    }, {
+        "colName": "上海外国语大学",
+        "coords": [121.4825, 31.27603],
+        "coletype": "course"
+    }, {
+        "colName": "上海体育学院",
+        "coords": [121.5257, 31.31158],
+        "coletype": "course"
+    }, {
+        "colName": "南京航空航天大学",
+        "coords": [118.81959, 32.03557],
+        "coletype": "course"
+    }, {
+        "colName": "南京理工大学",
+        "coords": [118.85602, 32.02974],
+        "coletype": "course"
+    }, {
+        "colName": "上海中医药大学",
+        "coords": [121.5968, 31.1944],
+        "coletype": "course"
+    }, {
+        "colName": "苏州大学",
+        "coords": [120.64041, 31.30567],
+        "coletype": "course"
+    }, {
+        "colName": "上海大学",
+        "coords": [121.39263, 31.31618],
+        "coletype": "course"
+    },
+    {
+        "colName": "南京林业大学",
+        "coords": [118.81513, 32.07879],
+        "coletype": "course"
+    }, {
+        "colName": "中国药科大学",
+        "coords": [118.78048, 32.07244],
+        "coletype": "course"
+    }, {
+        "colName": "中国矿业大学",
+        "coords": [116.35026, 39.99743],
+        "coletype": "course"
+    }, {
+        "colName": "南京邮电大学",
+        "coords": [118.77077, 32.08061],
+        "coletype": "course"
+    }, {
+        "colName": "南京中医药大学",
+        "coords": [118.76714, 32.04407],
+        "coletype": "course"
+    }, {
+        "colName": "河海大学",
+        "coords": [118.76045, 32.05651],
+        "coletype": "course"
+    }, {
+        "colName": "江南大学",
+        "coords": [120.27325, 31.48809],
+        "coletype": "course"
+    }, {
+        "colName": "南京信息工程大学",
+        "coords": [118.71909, 32.20306],
+        "coletype": "course"
+    }, {
+        "colName": "南京师范大学",
+        "coords": [118.76917, 32.05355],
+        "coletype": "course"
+    }, {
+        "colName": "南京农业大学",
+        "coords": [118.84462, 32.03405],
+        "coletype": "course"
+    },
+    {
+        "colName": "华中农业大学",
+        "coords": [114.35805, 30.47383],
+        "coletype": "course"
+    }, {
+        "colName": "安徽大学",
+        "coords": [117.18529, 31.76853],
+        "coletype": "course"
+    }, {
+        "colName": "中国美术学院",
+        "coords": [120.1553, 30.15704],
+        "coletype": "course"
+    }, {
+        "colName": "河南大学",
+        "coords": [114.36938, 34.81106],
+        "coletype": "course"
+    }, {
+        "colName": "中国地质大学",
+        "coords": [116.34819, 39.99108],
+        "coletype": "course"
+    }, {
+        "colName": "合肥工业大学",
+        "coords": [117.29544, 31.84471],
+        "coletype": "course"
+    }, {
+        "colName": "华中师范大学",
+        "coords": [114.3606, 30.51733],
+        "coletype": "course"
+    }, {
+        "colName": "福州大学",
+        "coords": [119.19781, 26.05981],
+        "coletype": "course"
+    }, {
+        "colName": "南昌大学",
+        "coords": [115.80461, 28.66041],
+        "coletype": "course"
+    }, {
+        "colName": "武汉理工大学",
+        "coords": [114.35282, 30.52027],
+        "coletype": "course"
+    },
+    {
+        "colName": "成都理工大学",
+        "coords": [104.14424, 30.67282],
+        "coletype": "course"
+    }, {
+        "colName": "海南大学",
+        "coords": [110.33175, 20.05628],
+        "coletype": "course"
+    }, {
+        "colName": "西南交通大学",
+        "coords": [104.05484, 30.69791],
+        "coletype": "course"
+    }, {
+        "colName": "广州中医药大学",
+        "coords": [113.40626, 23.05916],
+        "coletype": "course"
+    }, {
+        "colName": "华南师范大学",
+        "coords": [113.35053, 23.13803],
+        "coletype": "course"
+    }, {
+        "colName": "湖南师范大学",
+        "coords": [112.95012, 28.18502],
+        "coletype": "course"
+    }, {
+        "colName": "广西大学",
+        "coords": [108.28544, 22.83844],
+        "coletype": "course"
+    }, {
+        "colName": "西南石油大学",
+        "coords": [104.18402, 30.82559],
+        "coletype": "course"
+    }, {
+        "colName": "中南财经政法大学",
+        "coords": [114.38967, 30.47609],
+        "coletype": "course"
+    }, {
+        "colName": "暨南大学",
+        "coords": [113.34756, 23.13167],
+        "coletype": "course"
+    },
+    {
+        "colName": "西藏大学",
+        "coords": [91.1471, 29.64335],
+        "coletype": "course"
+    }, {
+        "colName": "西南财经大学",
+        "coords": [104.01545, 30.66696],
+        "coletype": "course"
+    }, {
+        "colName": "陕西师范大学",
+        "coords": [108.8919, 34.15304],
+        "coletype": "course"
+    }, {
+        "colName": "贵州大学",
+        "coords": [106.67469, 26.44274],
+        "coletype": "course"
+    }, {
+        "colName": "西安电子科技大学",
+        "coords": [108.91814, 34.23241],
+        "coletype": "course"
+    }, {
+        "colName": "长安大学",
+        "coords": [108.95663, 34.23118],
+        "coletype": "course"
+    }, {
+        "colName": "成都中医药大学",
+        "coords": [103.80756, 30.68513],
+        "coletype": "course"
+    }, {
+        "colName": "四川农业大学",
+        "coords": [103.00114, 29.97904],
+        "coletype": "course"
+    }, {
+        "colName": "西北大学",
+        "coords": [108.9277, 34.24777],
+        "coletype": "course"
+    }, {
+        "colName": "西南大学",
+        "coords": [106.42703, 29.82416],
+        "coletype": "course"
+    },
+    {
+        "colName": "石河子大学",
+        "coords": [86.05732, 44.30336],
+        "coletype": "course"
+    }, {
+        "colName": "青海大学",
+        "coords": [101.75135, 36.72925],
+        "coletype": "course"
+    },
+    {
+        "colName": "四川大学",
+        "coords": [104.08248, 30.63116],
+        "coletype": "edua"
+    }, {
+        "colName": "重庆大学",
+        "coords": [106.46813, 29.56484],
+        "coletype": "edua"
+    }, {
+        "colName": "电子科技大学",
+        "coords": [103.937404, 30.756035],
+        "coletype": "edua"
+    }, {
+        "colName": "西安交通大学",
+        "coords": [108.98338, 34.24625],
+        "coletype": "edua"
+    }, {
+        "colName": "西北工业大学",
+        "coords": [108.91634, 34.24426],
+        "coletype": "edua"
+    }, {
+        "colName": "兰州大学",
+        "coords": [103.85988, 36.04605],
+        "coletype": "edua"
+    }, {
+        "colName": "国防科技大学",
+        "coords": [113.00024, 28.22642],
+        "coletype": "edua"
+    }, {
+        "colName": "东北大学",
+        "coords": [123.41938, 41.76523],
+        "coletype": "edub"
+    }, {
+        "colName": "郑州大学",
+        "coords": [113.53591, 34.81717],
+        "coletype": "edub"
+    }, {
+        "colName": "湖南大学",
+        "coords": [112.94388, 28.17951],
+        "coletype": "edub"
+    }, {
+        "colName": "宁夏大学",
+        "coords": [106.13884, 38.49656],
+        "coletype": "course"
+    }, {
+        "colName": "中国石油大学",
+        "coords": [116.2474, 40.21933],
+        "coletype": "course"
+    }, {
+        "colName": "宁波大学",
+        "coords": [103.937404, 30.756035],
+        "coletype": "course"
+    }, {
+        "colName": "中国科学院大学",
+        "coords": [116.67938, 40.40966],
+        "coletype": "course"
+    }, {
+        "colName": "第二军医大学",
+        "coords": [121.52906, 31.30436],
+        "coletype": "course"
+    }, {
+        "colName": "第四军医大学",
+        "coords": [108.98048, 34.27338],
+        "coletype": "course"
+    }
+]

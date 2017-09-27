@@ -112,9 +112,9 @@
                             }
                         }
                     },
-                    zoom: 1.2,
+                    zoom: 1.0,
                     center: [104.070029,36.583574],
-                    roam: true,
+                    roam: false,
                     itemStyle: {
                         normal: {
                             color: 'rgb(238,238,238)',
