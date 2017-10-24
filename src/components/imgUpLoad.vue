@@ -3,10 +3,10 @@
     <div class="imgArea">
       <h2>图片上传预览</h2>
       <ul>
-        <li v-for="(item,index) in mmm" >
+        <li v-for="(item,index) in mmm" :key="index">
           <span>+</span>
           <img v-if="item.data != ''" v-bind:src=" item.data || index " >
-          <input type="file" :id=" item.name " @change="pushImg($event,index)" accept="image/jpeg,image/png,image/gif">
+          <input type="file" :id=" item.name " @change="pushImg($event,index)" accept="image/jpeg,image/png,image/gif" alt="">
           <span class="clear" v-if="item.data != ''" @click="delImg($event,index)">删</span>
         </li>
       </ul>
@@ -106,6 +106,7 @@ export default {
     height: 100%;
     opacity: 0;
     cursor: pointer;
+    z-index: 5;
   }
   .imgArea .clear{
     font-size: 16px;

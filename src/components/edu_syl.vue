@@ -54,7 +54,7 @@
             }
         },
         methods: {
-            creatMap: function (id, data) {
+          creatMap: function (id, data) {
               let _this = this;
               let mychart = this.$echarts.init(document.getElementById(id));
               let lista = [], listb=[],listc=[];
@@ -70,7 +70,7 @@
               let option = {
                 title: {
                   show: true,
-                  text: '2017双一流大学及学科',
+                  text: '2017双111一流大学及学科',
                   top : '15%',
                   left: 'center',
                   textStyle: {
@@ -78,7 +78,6 @@
                   }
                 },
                 tooltip: {
-                  show: false,
                   trigger: 'item',
                   formatter(p){
                     return '0';
@@ -97,7 +96,7 @@
                     emphasis: {
                       show: true,
                       fontSize: 50,
-                      opacity: 0.2
+                      opacity: 0.5
                     }
                   },
                   roam: true,
@@ -116,6 +115,7 @@
                 },
                 series: []
               };
+              console.log(lista)
               option.series.push(_this.fomartCoord(listc,'orange'))
               option.series.push(_this.fomartCoord(listb,'blue'))
               option.series.push(_this.fomartCoord(lista,'red'))
@@ -123,7 +123,7 @@
             },
           fomartCoord: function (d,cor) {
             let series = {
-              type : 'scatter',
+              type : 'effectScatter',
               name : 'city',
               coordinateSystem: 'geo',
               label: {
@@ -149,6 +149,7 @@
               },
               tooltip: {
                 formatter: function (params) {
+                    console.log(params)
                   return ;
                 }
               },
@@ -158,7 +159,7 @@
               series.data.push({
                 'name': res.colName,
                 'value': res.coords,
-                'meta': res.type
+                'meta': res.coletype
               })
             })
             return series;
