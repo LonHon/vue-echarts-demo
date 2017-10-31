@@ -78,10 +78,7 @@
                   }
                 },
                 tooltip: {
-<<<<<<< HEAD
                   show: true,
-=======
->>>>>>> db95d27bb9a788a7224f55d3db266297c1a67fd6
                   trigger: 'item',
                   formatter(p){
                     console.log(p);
@@ -99,15 +96,9 @@
                           show: true
                       },
                     emphasis: {
-<<<<<<< HEAD
                       show: false,
                       fontSize: 12,
-                      opacity: 0.2
-=======
-                      show: true,
-                      fontSize: 50,
-                      opacity: 0.5
->>>>>>> db95d27bb9a788a7224f55d3db266297c1a67fd6
+                      opacity: 0.2,
                     }
                   },
                   roam: true,
