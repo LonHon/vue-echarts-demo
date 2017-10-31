@@ -54,7 +54,7 @@
             }
         },
         methods: {
-            creatMap: function (id, data) {
+          creatMap: function (id, data) {
               let _this = this;
               let mychart = this.$echarts.init(document.getElementById(id));
               let lista = [], listb=[],listc=[];
@@ -70,7 +70,7 @@
               let option = {
                 title: {
                   show: true,
-                  text: '2017双一流大学及学科',
+                  text: '2017双111一流大学及学科',
                   top : '15%',
                   left: 'center',
                   textStyle: {
@@ -78,7 +78,10 @@
                   }
                 },
                 tooltip: {
+<<<<<<< HEAD
                   show: true,
+=======
+>>>>>>> db95d27bb9a788a7224f55d3db266297c1a67fd6
                   trigger: 'item',
                   formatter(p){
                     console.log(p);
@@ -96,9 +99,15 @@
                           show: true
                       },
                     emphasis: {
+<<<<<<< HEAD
                       show: false,
                       fontSize: 12,
                       opacity: 0.2
+=======
+                      show: true,
+                      fontSize: 50,
+                      opacity: 0.5
+>>>>>>> db95d27bb9a788a7224f55d3db266297c1a67fd6
                     }
                   },
                   roam: true,
@@ -117,6 +126,7 @@
                 },
                 series: []
               };
+              console.log(lista)
               option.series.push(_this.fomartCoord(listc,'orange'))
               option.series.push(_this.fomartCoord(listb,'blue'))
               option.series.push(_this.fomartCoord(lista,'red'))
@@ -124,7 +134,7 @@
             },
           fomartCoord: function (d,cor) {
             let series = {
-              type : 'scatter',
+              type : 'effectScatter',
               name : 'city',
               coordinateSystem: 'geo',
               label: {
@@ -150,6 +160,7 @@
               },
               tooltip: {
                 formatter: function (params) {
+                    console.log(params)
                   return ;
                 }
               },
@@ -159,7 +170,7 @@
               series.data.push({
                 'name': res.colName,
                 'value': res.coords,
-                'meta': res.type
+                'meta': res.coletype
               })
             })
             return series;
