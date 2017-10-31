@@ -1,17 +1,20 @@
 # vuedemo
+> 此项目用于vue学习，webpack +  vue2 + vue-cli + Echart3
 
-> just study
-
-## Build Setup
-
+## 安装步骤
 ``` bash
-# install dependencies
+### 安装依赖包
 npm install
 
-# serve with hot reload at localhost:8080
+### 启动项目 访问localhost:8090
 npm run dev
-
--------------------------------
-2017-8-13
-在map的上拓展交互，点击map后会创建饼图
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+```
+## 部分效果图预览
+### Echart地图拓展
+![image](https://github.com/LonHon/VUE-demo/tree/master/img-readme/map-pie.gif)
+### 双一流大学分布
+![image](https://github.com/LonHon/VUE-demo/tree/master/img-readme/syl.gif)
+### 图片上传预览
+![image](https://github.com/LonHon/VUE-demo/tree/master/img-readme/imgupload.gif)
+### 模糊查询
+![image](https://github.com/LonHon/VUE-demo/tree/master/img-readme/search.gif)
