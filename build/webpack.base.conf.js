@@ -6,17 +6,18 @@ var vueLoaderConfig = require('./vue-loader.conf')
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
 }
-
 module.exports = {
   entry: {
     app: './src/main.js'
   },
   output: {
-    path: config.build.assetsRoot,
+    path: config.build.assetsRoot,//输出dist路径
     filename: '[name].js',
-    publicPath: '.' + process.env.NODE_ENV === 'production'
-      ? config.build.assetsPublicPath
-      : config.dev.assetsPublicPath
+    //资源文件路径
+    // publicPath: '/' + process.env.NODE_ENV === 'production'
+    //   ? config.build.assetsPublicPath
+    //   : config.dev.assetsPublicPath
+    publicPath: process.env.NODE_ENV === 'production' ? './' : '/'+config.dev.assetsPublicPath
   },
   resolve: {
     extensions: ['.js', '.vue', '.json'],
