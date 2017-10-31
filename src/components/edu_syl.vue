@@ -78,9 +78,10 @@
                   }
                 },
                 tooltip: {
-                  show: false,
+                  show: true,
                   trigger: 'item',
                   formatter(p){
+                    console.log(p);
                     return '0';
                   },
                   axisPointer: {
@@ -95,8 +96,8 @@
                           show: true
                       },
                     emphasis: {
-                      show: true,
-                      fontSize: 50,
+                      show: false,
+                      fontSize: 12,
                       opacity: 0.2
                     }
                   },
