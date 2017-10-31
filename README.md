@@ -10,15 +10,15 @@ npm install
 npm run dev
 ```
 ## 部分效果图预览
+
 ### Echart地图拓展
-![Echart地图拓展动图](https://github.com/LonHon/VUE-demo/tree/master/img-readme/map-pie.gif)
-![Echart地图拓展](https://github.com/LonHon/VUE-demo/tree/master/img-readme/map-pie.png)
+![Echart地图拓展动图](https://raw.githubusercontent.com/LonHon/VUE-demo/master/img-readme/map-pie.gif)
+
 ### 双一流大学分布
-![双一流大学分布动图](https://github.com/LonHon/VUE-demo/tree/master/img-readme/syl.gif)
-![双一流大学分布](https://github.com/LonHon/VUE-demo/tree/master/img-readme/syl.png)
+![双一流大学分布动图](https://raw.githubusercontent.com/LonHon/VUE-demo/master/img-readme/syl.gif)
+
 ### 图片上传预览
-![图片上传预览动图](https://github.com/LonHon/VUE-demo/tree/master/img-readme/imgupload.gif)
-![图片上传预览](https://github.com/LonHon/VUE-demo/tree/master/img-readme/imgupload.png)
+![图片上传预览动图](https://raw.githubusercontent.com/LonHon/VUE-demo/master/img-readme/imgupload.gif)
+
 ### 模糊查询
-![模糊查询动图](https://github.com/LonHon/VUE-demo/tree/master/img-readme/search.gif)
-![模糊查询](https://github.com/LonHon/VUE-demo/tree/master/img-readme/search.png)
+![模糊查询动图](https://raw.githubusercontent.com/LonHon/VUE-demo/master/img-readme/search.gif)
