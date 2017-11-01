@@ -12,7 +12,7 @@ npm run dev
 ## 部分效果图预览
 
 ### Echart地图拓展
-![Echart地图拓展动图](https://raw.githubusercontent.com/LonHon/some-resource/master/vue-demo-img/map-pie.giff)
+![Echart地图拓展动图](https://raw.githubusercontent.com/LonHon/some-resource/master/vue-demo-img/map-pie.gif)
 
 ### 双一流大学分布
 ![双一流大学分布动图](https://raw.githubusercontent.com/LonHon/some-resource/master/vue-demo-img/syl.gif)
