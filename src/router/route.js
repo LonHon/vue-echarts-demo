@@ -5,6 +5,7 @@ import chart from '@/components/echartsDemo'
 import fuzzySearch from '@/components/fuzzySearch'
 import userRespon from '@/components/userResponse'
 import edu_syl from '@/components/edu_syl'
+import calendar from '@/tools/calendar'
 Vue.use(Router)
 
 export default new Router({
@@ -38,6 +39,11 @@ export default new Router({
       path: '/edu_syl',
       name: 'edu_syl',
       component: edu_syl
+    },
+    {
+      path: '/calendar',
+      name: 'calendar',
+      component: calendar
     },
 
   ]

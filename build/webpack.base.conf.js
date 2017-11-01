@@ -14,10 +14,10 @@ module.exports = {
     path: config.build.assetsRoot,//输出dist路径
     filename: '[name].js',
     //资源文件路径
-    // publicPath: '/' + process.env.NODE_ENV === 'production'
-    //   ? config.build.assetsPublicPath
-    //   : config.dev.assetsPublicPath
-    publicPath: process.env.NODE_ENV === 'production' ? './' : '/'+config.dev.assetsPublicPath
+    publicPath: '/' + process.env.NODE_ENV === 'production'
+      ? config.build.assetsPublicPath
+      : config.dev.assetsPublicPath
+    // publicPath: process.env.NODE_ENV === 'production' ? './' : ('/'+config.dev.assetsPublicPath)
   },
   resolve: {
     extensions: ['.js', '.vue', '.json'],

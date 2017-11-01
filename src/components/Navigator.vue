@@ -42,6 +42,11 @@
                     name: '查询',
                     path: '/search',
                     descript: '做一个模糊查询'
+                  },
+                  {
+                    name: '日历',
+                    path: '/calendar',
+                    descript: '一个日历控件'
                   }
                 ]
             }
