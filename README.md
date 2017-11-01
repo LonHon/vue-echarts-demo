@@ -12,13 +12,13 @@ npm run dev
 ## 部分效果图预览
 
 ### Echart地图拓展
-![Echart地图拓展动图](https://raw.githubusercontent.com/LonHon/VUE-demo/master/img-readme/map-pie.gif)
+![Echart地图拓展动图](https://raw.githubusercontent.com/LonHon/some-resource/master/vue-demo-img/map-pie.giff)
 
 ### 双一流大学分布
-![双一流大学分布动图](https://raw.githubusercontent.com/LonHon/VUE-demo/master/img-readme/syl.gif)
+![双一流大学分布动图](https://raw.githubusercontent.com/LonHon/some-resource/master/vue-demo-img/syl.gif)
 
 ### 图片上传预览
-![图片上传预览动图](https://raw.githubusercontent.com/LonHon/VUE-demo/master/img-readme/imgupload.gif)
+![图片上传预览动图](https://raw.githubusercontent.com/LonHon/some-resource/master/vue-demo-img/imgupload.gif)
 
 ### 模糊查询
-![模糊查询动图](https://raw.githubusercontent.com/LonHon/VUE-demo/master/img-readme/search.gif)
+![模糊查询动图](https://raw.githubusercontent.com/LonHon/some-resource/master/vue-demo-img/search.gif)
