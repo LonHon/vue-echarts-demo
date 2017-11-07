@@ -14,6 +14,10 @@ npm run dev
 ### Echart地图拓展
 ![Echart地图拓展动图](https://raw.githubusercontent.com/LonHon/some-resource/master/vue-demo-img/map-pie.gif)
 
+### 日历组件
+#### 可下载单vue文件使用该组件，具体可见博客
+![日历组件](https://raw.githubusercontent.com/LonHon/some-resource/master/vue-demo-img/calendar.gif)
+
 ### 双一流大学分布
 ![双一流大学分布动图](https://raw.githubusercontent.com/LonHon/some-resource/master/vue-demo-img/syl.gif)
 
