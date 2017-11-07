@@ -39,14 +39,9 @@
                     descript: '百度eCharts做的一些demo'
                   },
                   {
-                    name: '查询',
-                    path: '/search',
-                    descript: '做一个模糊查询'
-                  },
-                  {
-                    name: '日历',
-                    path: '/calendar',
-                    descript: '一个日历控件'
+                    name: '工具',
+                    path: '/toolShow',
+                    descript: '一些自制控件演示'
                   }
                 ]
             }

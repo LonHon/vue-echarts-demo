@@ -17,9 +17,14 @@ table { border-collapse:collapse; border-spacing:0; }
 
 @font-face {
   font-family: 'iconfont';  /* project id 129360 */
-  src: url('//at.alicdn.com/t/font_pu2u83nuxjiw9udi.eot');
-  src: url('//at.alicdn.com/t/font_pu2u83nuxjiw9udi.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_pu2u83nuxjiw9udi.woff') format('woff'),
-  url('//at.alicdn.com/t/font_pu2u83nuxjiw9udi.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_pu2u83nuxjiw9udi.svg#iconfont') format('svg');
+  src: url('//at.alicdn.com/t/font_129360_4mesgl4imvbtvs4i.eot');
+  src: url('//at.alicdn.com/t/font_129360_4mesgl4imvbtvs4i.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_129360_4mesgl4imvbtvs4i.woff') format('woff'),
+  url('//at.alicdn.com/t/font_129360_4mesgl4imvbtvs4i.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_129360_4mesgl4imvbtvs4i.svg#iconfont') format('svg');
+}
+
+i {
+  font-family: 'iconfont';
+  font-style: normal;
 }

@@ -2,10 +2,9 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import imgUpLoad from '@/components/imgUpLoad'
 import chart from '@/components/echartsDemo'
-import fuzzySearch from '@/components/fuzzySearch'
+import toolShow from '@/components/toolShow'
 import userRespon from '@/components/userResponse'
 import edu_syl from '@/components/edu_syl'
-import calendar from '@/tools/calendar'
 Vue.use(Router)
 
 export default new Router({
@@ -31,19 +30,14 @@ export default new Router({
       component: chart
     },
     {
-      path: '/search',
-      name: 'fuzzySearch',
-      component: fuzzySearch
+      path: '/toolShow',
+      name: 'toolShow',
+      component: toolShow
     },
     {
       path: '/edu_syl',
       name: 'edu_syl',
       component: edu_syl
-    },
-    {
-      path: '/calendar',
-      name: 'calendar',
-      component: calendar
     }
   ]
 })
