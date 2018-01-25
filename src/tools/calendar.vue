@@ -47,6 +47,14 @@ export default {
       // 返回 类似 2016-01-02 格式的字符串
       let y = year,
         m = month;
+        if(m>12){ //明年
+            y += 1;
+            m -= 12;
+        }
+        if(m<1){ //去年
+            y -= 1;
+            m += 12;
+        }
       if (m < 10) m = "0" + m;
       let d = day;
       if (d < 10) d = "0" + d;
