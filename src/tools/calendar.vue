@@ -144,10 +144,10 @@ export default {
       }
     },
     dateCompare: function(da,db) {
-      if(new Date(da).getTime() < new Date(db).getTime()){
-        return false
+      if(new Date(da).getTime() > new Date(db).getTime()){
+        return true
       }
-      return true;
+      return false;
     },
     pick: function(date) {
       //选中日期并传出
