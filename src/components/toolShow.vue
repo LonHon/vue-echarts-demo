@@ -1,13 +1,19 @@
 <template>
   <div id="search">
     <div class="left-side-box">
-      <label for="calendar-value">日期:</label>
-      <input v-model="calendarInitDay" id="calendar-value" type="text" @click="calendarShow=!calendarShow" style="cursor:pointer;" readonly placeholder="点击我显示日历">
+      <label for="calendar-value">日期:{{ calendarInitDay }}</label>
+      <input v-show="false" v-model="calendarInitDay" id="calendar-value" type="text" @click="calendarShow=!calendarShow" style="cursor:pointer;" readonly placeholder="点击我显示日历">
       <!-- 日历容器{宽度、定位}  点击容器后关闭日历 -->
       <div v-show="calendarShow" class="calendar-box">
-        <calendar v-on:changeDate="getDate" :initDay="calendarInitDay">
+        <calendar
+          v-on:changeDate="getDate"
+          :initDay="calendarInitDay"
+          :lockDay="false">
           <!-- 可传入初始值 -->
         </calendar>
+      </div>
+      <div class="cale-cp">
+        <calendarCp :initOpt="opt" v-on:changeRangeDate="getDateRange"></calendarCp>
       </div>
     </div>
   </div>
@@ -15,18 +21,27 @@
 
 <script>
     import calendar from '@/tools/calendar'
+    import calendarCp from '@/tools/cp'
     export default {
         name: 'search',
         data () {
             return {
-                calendarInitDay: '2017-12-12',
-                calendarShow: true
+                calendarInitDay: '2017-12-29',
+                calendarShow: false,
+                opt:{
+                  start: '2018.01.29',
+                  end:'2018.01.30',
+                  isDis: false
+                }
             }
         },
-        components: {'calendar':calendar},
+        components: {calendar,calendarCp},
         methods: {
           getDate: function(d){//获取组件返回的日期
             this.calendarInitDay = d;
+          },
+          getDateRange: function(rd){//获取双日历返回日期范围
+            this.calendarInitDay = rd;
           }
         },
     }
@@ -44,6 +59,12 @@
   }
   .calendar-box{
     width: 300px;
+    position: relative;
+    top: 15px;
+    left: 100px;
+  }
+  .cale-cp{
+    width: 600px;
     position: relative;
     top: 15px;
     left: 100px;

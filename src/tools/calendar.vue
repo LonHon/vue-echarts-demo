@@ -20,7 +20,7 @@
     </div>
     <div class="cbody">
       <ul>
-        <li v-for="day in days" :key="day">
+        <li v-for="(day,i) in days" :key="i">
           <span v-text="day.num" :title="day.date"
           :class="{otherMonth: day.otherMonth, today:day.date===today,checkday: day.date===checkDay}"
           @click="pick(day.date)">
@@ -41,13 +41,20 @@ export default {
       curY: 0, //check年份
       curM: 0, //check月份
       days: [
-        // num: 号数,
-        // date: 完整日期,
-        // otherMonth: 是否其它月
       ]
     };
   },
-  props: ["initDay"], //默认选中日期
+  props: ["initDay","lockDay"], //默认选中日期
+  watch:{
+    initDay: function(v,ov){
+      if(this.lockDay){
+        this.pick(v.replace(/\./g,'/'));
+      }
+    },
+    lockDay: function(v,ov){
+      this.pick(this.checkDay);
+    }
+  },
   methods: {
     formatDate: function(year, month, day) {
       // 返回 类似 2016-01-02 格式的字符串
@@ -90,7 +97,8 @@ export default {
         sumDay = new Date(y, m, 0).getDate(), //当月总天数
         lastSumDay = new Date(y, m - 1, 0).getDate(), //上月总天数
         week = cur.getDay(), //本月1号周几
-        total = sumDay + week + 1 > 35 ? 42 : 35; //适应最大展示数量
+        // total = sumDay + week + 1 > 35 ? 42 : 35; //适应最大展示数量
+        total = 42;
 
       for (let i = 0; i < total; i++) {
         if (i < week) {
@@ -101,12 +109,30 @@ export default {
             otherMonth: true
           });
         } else if (i - week < sumDay) {
-          this.days.push({
-            //本月
-            num: i - week + 1,
-            date: this.formatDate(y, m, i - week + 1),
-            otherMonth: false
-          });
+          if(this.lockDay){
+            if(!this.dateCompare(this.formatDate(y, m, i - week + 1),this.lockDay)){
+              this.days.push({
+                //本月
+                num: i - week + 1,
+                date: this.formatDate(y, m, i - week + 1),
+                otherMonth: true
+              });
+            }else{
+              this.days.push({
+                //本月
+                num: i - week + 1,
+                date: this.formatDate(y, m, i - week + 1),
+                otherMonth: false
+              });
+            }
+          }else{
+            this.days.push({
+              //本月
+              num: i - week + 1,
+              date: this.formatDate(y, m, i - week + 1),
+              otherMonth: false
+            });
+          }
         } else {
           this.days.push({
             //下月
@@ -117,8 +143,21 @@ export default {
         }
       }
     },
+    dateCompare: function(da,db) {
+      if(new Date(da).getTime() < new Date(db).getTime()){
+        return false
+      }
+      return true;
+    },
     pick: function(date) {
       //选中日期并传出
+      let bor = this.lockDay;
+      if(bor){
+        bor = bor.replace(/\./g,'/');
+        if(!this.dateCompare(date,bor)){
+          return false;
+        }
+      }
       this.checkDay = date;
       let cur = new Date(date),
         cy = cur.getFullYear(),
@@ -151,12 +190,14 @@ export default {
       this.$emit("changeDate", d);
     }
   },
-  created: function() {},
-  mounted: function() {
+  created: function() {
     let d = this.initDay;
     d = d.replace(/-/g, "/");
+    d = d.replace(/\./g, "/");
     this.checkDay = d;
     this.initDate(d);
+  },
+  mounted: function() {
   }
 };
 </script>
