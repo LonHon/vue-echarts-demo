@@ -40,7 +40,7 @@
                   end:'2018.01.30',
                   isDis: false
                 },
-                stxt:"容器装不下 | O(∩_∩)O          (⊙v⊙)               (*^__^*) | 你才胖"
+                stxt:"容器装不下--------你才胖"
             }
         },
         components: {calendar,calendarCp,movespan},
@@ -81,7 +81,8 @@
     width:100px;
     height: 50px;
     line-height: 50px;
-    border:solid;
+    border: 2px solid steelblue;
+    padding: 0 5px;
     margin-left: 900px;
     cursor:pointer;
     overflow:hidden;

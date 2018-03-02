@@ -24,5 +24,11 @@ npm run dev
 ### 图片上传预览
 ![图片上传预览动图](https://raw.githubusercontent.com/LonHon/some-resource/master/vue-demo-img/imgupload.gif)
 
-### 模糊查询
+### 文字溢出滚动
+![文字溢出滚动long](https://raw.githubusercontent.com/LonHon/some-resource/master/vue-demo-img/scroll-long.gif)
+上为短溢出，下为长溢出，有跳帧见谅。
+![文字溢出滚动short](https://raw.githubusercontent.com/LonHon/some-resource/master/vue-demo-img/scroll-short.gif)
+
+### 模糊查询- 待完成
+
 ![模糊查询动图](https://raw.githubusercontent.com/LonHon/some-resource/master/vue-demo-img/search.gif)
