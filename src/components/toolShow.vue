@@ -40,7 +40,7 @@
                   end:'2018.01.30',
                   isDis: false
                 },
-                stxt:"容器装不下--------你才胖test"
+                stxt:"容器装不下--------你才胖test2"
             }
         },
         components: {calendar,calendarCp,movespan},
