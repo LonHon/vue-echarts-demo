@@ -1,27 +1,43 @@
 import Vue from 'vue'
-import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import Router from 'vue-router'
+import imgUpLoad from '@/components/imgUpLoad'
+import chart from '@/components/echartsDemo'
+import toolShow from '@/components/toolShow'
+import userRespon from '@/components/userResponse'
+import eduSyl from '@/components/edu_syl'
+Vue.use(Router)
 
-Vue.use(VueRouter)
-
-const routes = [
-  {
-    path: '/',
-    name: 'home',
-    component: Home
-  },
-  {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  }
-]
-
-const router = new VueRouter({
-  routes
+export default new Router({
+  routes: [
+    {
+      path: '/',
+      name: 'default',
+      component: chart
+    },
+    {
+      path: '/userRespon',
+      name: 'userRespon',
+      component: userRespon
+    },
+    {
+      path: '/upImage',
+      name: 'imgUpLoad',
+      component: imgUpLoad
+    },
+    {
+      path: '/chart',
+      name: 'chart',
+      component: chart
+    },
+    {
+      path: '/toolShow',
+      name: 'toolShow',
+      component: toolShow
+    },
+    {
+      path: '/edu_syl',
+      name: 'edu_syl',
+      component: eduSyl
+    }
+  ]
 })
-
-export default router
